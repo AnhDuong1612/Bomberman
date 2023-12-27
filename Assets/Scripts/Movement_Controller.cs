@@ -1,62 +1,89 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Movement_Controller : MonoBehaviour
 {
-    public new Rigidbody2D rigidbody {  get; private set; }
-    private Vector2 direction = Vector2.down; //huong di chuyen mac dinh se la di xuong
+    public new Rigidbody2D rigidbody { get; private set; }
+    private Vector2 direction = Vector2.down; // Hướng di chuyển mặc định là đi xuống
     public KeyCode inputUp = KeyCode.W;
     public KeyCode inputDown = KeyCode.S;
     public KeyCode inputLeft = KeyCode.A;
     public KeyCode inputRight = KeyCode.D;
-    public float speed { get; private set; } = 5f; // Toc do di chuyen cua nhan vat
+    public float speed { get; private set; } = 5f; // Tốc độ di chuyển của nhân vật
 
     public Render_Sprites spriteRenderUp;
     public Render_Sprites spriteRenderDown;
     public Render_Sprites spriteRenderLeft;
     public Render_Sprites spriteRenderRight;
     public Render_Sprites activeSpriteRender;
+
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         activeSpriteRender = spriteRenderDown;
+        InitializeSpriteRenderers();
     }
-    private void Update() // thiet lap di chuyen nhan vat 
+
+    private void InitializeSpriteRenderers()
+    {
+        // Kiểm tra và gán giá trị cho tất cả các SpriteRenderers
+        if (spriteRenderUp == null) spriteRenderUp = GetComponentInChildren<Render_Sprites>();
+        if (spriteRenderDown == null) spriteRenderDown = GetComponentInChildren<Render_Sprites>();
+        if (spriteRenderLeft == null) spriteRenderLeft = GetComponentInChildren<Render_Sprites>();
+        if (spriteRenderRight == null) spriteRenderRight = GetComponentInChildren<Render_Sprites>();
+
+        // Gán giá trị mặc định cho activeSpriteRender nếu nó là null
+        if (activeSpriteRender == null) activeSpriteRender = spriteRenderDown;
+    }
+
+    private void Update() // Thiết lập di chuyển nhân vật 
     {
         if (Input.GetKey(inputUp))
         {
             SetDirection(Vector2.up, spriteRenderUp);
-        } else if (Input.GetKey(inputDown))
+        }
+        else if (Input.GetKey(inputDown))
         {
             SetDirection(Vector2.down, spriteRenderDown);
-        } else if (Input.GetKey(inputLeft)) 
+        }
+        else if (Input.GetKey(inputLeft))
         {
             SetDirection(Vector2.left, spriteRenderLeft);
-        } else if (Input.GetKey(inputRight))
+        }
+        else if (Input.GetKey(inputRight))
         {
-            SetDirection(Vector2.right, spriteRenderRight);    
-        } else
+            SetDirection(Vector2.right, spriteRenderRight);
+        }
+        else
         {
             SetDirection(Vector2.zero, activeSpriteRender);
         }
     }
-    private void FixedUpdate() //cap nhat vi tri cua nhan vat dua theo huong va toc do di chuyen
-    {
-        Vector2 position = rigidbody.position; //lay vi tri hien tai cua nhan vat
-        Vector2 translation = direction * speed * Time.deltaTime; // tinh toan vi tri sau khi di chuyen cua nhan vat
 
-        rigidbody.MovePosition(position + translation); //dich chuyen nhan vat den vi tri moi
+    private void FixedUpdate() // Cập nhật vị trí của nhân vật dựa trên hướng và tốc độ di chuyển
+    {
+        Vector2 position = rigidbody.position; // Lấy vị trí hiện tại của nhân vật
+        Vector2 translation = direction * speed * Time.fixedDeltaTime; // Tính toán vị trí sau khi di chuyển của nhân vật
+
+        rigidbody.MovePosition(position + translation); // Di chuyển nhân vật đến vị trí mới
     }
-    private void SetDirection( Vector2 newDirection, Render_Sprites spriteRenderer) //xac dinh huong di chuyen cua nhan vat
+
+    private void SetDirection(Vector2 newDirection, Render_Sprites spriteRenderer) // Xác định hướng di chuyển của nhân vật
     {
         direction = newDirection;
 
-        spriteRenderUp.enabled = spriteRenderer == spriteRenderUp;
-        spriteRenderDown.enabled = spriteRenderer == spriteRenderDown;
-        spriteRenderLeft.enabled = spriteRenderer == spriteRenderLeft;
-        spriteRenderRight.enabled = spriteRenderer == spriteRenderRight;
+        if (spriteRenderUp != null) spriteRenderUp.enabled = spriteRenderer == spriteRenderUp;
+        if (spriteRenderDown != null) spriteRenderDown.enabled = spriteRenderer == spriteRenderDown;
+        if (spriteRenderLeft != null) spriteRenderLeft.enabled = spriteRenderer == spriteRenderLeft;
+        if (spriteRenderRight != null) spriteRenderRight.enabled = spriteRenderer == spriteRenderRight;
+
+        if (activeSpriteRender != null)
+        {
+            activeSpriteRender.freeze = direction == Vector2.zero;
+        }
+
         activeSpriteRender = spriteRenderer;
-        activeSpriteRender.freeze = direction == Vector2.zero;
     }
 }
