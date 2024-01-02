@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1478873804923856119}
   - component: {fileID: 8848140233117638318}
   - component: {fileID: 4137699666959236714}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Destructible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,3 +168,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba9e818070d8d424dae7bd218466b4a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destructionTime: 1
