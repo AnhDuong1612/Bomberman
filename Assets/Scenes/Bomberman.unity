@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 60235544}
   - component: {fileID: 60235546}
   - component: {fileID: 60235545}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Indestructibles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2621,6 +2621,14 @@ MonoBehaviour:
   inputKey: 32
   bombFuseTime: 3
   bombAmount: 1
+  explosionPrefab: {fileID: 2425462979835493922, guid: 60d9a489a4c8707498ec74981eb523bc, type: 3}
+  explosionLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  explosionDuration: 1
+  explosionRadius: 1
+  destructibleTilemaps: {fileID: 1640252392}
+  DestructiblePrefab: {fileID: 4137699666959236714, guid: f23556e6ffcf78b4fb2c3066d23cdaaa, type: 3}
 --- !u!1 &466305566
 GameObject:
   m_ObjectHideFlags: 0
@@ -3055,7 +3063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 814662493}
   - component: {fileID: 814662492}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3271,10 +3279,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7838021d7349c034aaebf6b40fe9879f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombPrefabs: {fileID: 0}
-  inputKey: 32
+  bombPrefabs: {fileID: 5594577675246527591, guid: dfa93d472de68f844958dcbbe2972013, type: 3}
+  inputKey: 281
   bombFuseTime: 3
   bombAmount: 1
+  explosionPrefab: {fileID: 2425462979835493922, guid: 60d9a489a4c8707498ec74981eb523bc, type: 3}
+  explosionLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  explosionDuration: 1
+  explosionRadius: 1
+  destructibleTilemaps: {fileID: 1640252392}
+  DestructiblePrefab: {fileID: 4137699666959236714, guid: f23556e6ffcf78b4fb2c3066d23cdaaa, type: 3}
 --- !u!1 &1036705967
 GameObject:
   m_ObjectHideFlags: 0
@@ -3591,7 +3607,7 @@ GameObject:
   - component: {fileID: 1640252392}
   - component: {fileID: 1640252391}
   - component: {fileID: 1640252393}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Destructibles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
