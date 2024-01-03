@@ -60,12 +60,12 @@ public class Bomb_Controller : MonoBehaviour
     {
         if (length <= 0)
         {
-            DestroyDestructible(position);
             return;
         }
         position += direction;
         if(Physics2D.OverlapBox(position, Vector2.one/2f, 0f, explosionLayerMask))
         {
+            DestroyDestructible(position);
             return;
         }
 
