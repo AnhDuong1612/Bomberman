@@ -87,6 +87,12 @@ public class Bomb_Controller : MonoBehaviour
             destructibleTilemaps.SetTile(cell, null);
         }
     }
+
+    public void AddBom()
+    {
+        bombAmount++;
+        bombRemain++;
+    }
 }
 
 

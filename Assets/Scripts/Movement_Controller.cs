@@ -5,13 +5,13 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Movement_Controller : MonoBehaviour
 {
-    public new Rigidbody2D rigidbody { get; private set; }
+    public new Rigidbody2D rigidbody { get; set; }
     private Vector2 direction = Vector2.down; // Hướng di chuyển mặc định là đi xuống
     public KeyCode inputUp = KeyCode.W;
     public KeyCode inputDown = KeyCode.S;
     public KeyCode inputLeft = KeyCode.A;
     public KeyCode inputRight = KeyCode.D;
-    public float speed { get; private set; } = 5f; // Tốc độ di chuyển của nhân vật
+    public float speed { get; set; } = 5f; // Tốc độ di chuyển của nhân vật
 
     public Render_Sprites spriteRenderUp;
     public Render_Sprites spriteRenderDown;
