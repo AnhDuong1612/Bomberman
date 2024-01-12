@@ -1358,7 +1358,7 @@ GameObject:
   - component: {fileID: 344070829}
   - component: {fileID: 344070827}
   - component: {fileID: 344070830}
-  - component: {fileID: 344070832}
+
   m_Layer: 3
   m_Name: Player1
   m_TagString: Player
@@ -1375,7 +1375,7 @@ Transform:
   m_GameObject: {fileID: 344070823}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.94, y: 5.22, z: 0.029904928}
+  m_LocalPosition: {x: -6, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1539,7 +1539,7 @@ MonoBehaviour:
   explosionRadius: 1
   destructibleTilemaps: {fileID: 1640252392}
   DestructiblePrefab: {fileID: 4137699666959236714, guid: f23556e6ffcf78b4fb2c3066d23cdaaa, type: 3}
---- !u!114 &344070832
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1548,10 +1548,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 344070823}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9d4da4477454e30b1befb3dc545df9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
+
 --- !u!1 &466305566
 GameObject:
   m_ObjectHideFlags: 0
@@ -3963,7 +3960,7 @@ Transform:
   m_GameObject: {fileID: 933079024}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.07, y: -4.9, z: 0.029904928}
+  m_LocalPosition: {x: 6, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4561,8 +4558,8 @@ Canvas:
   m_GameObject: {fileID: 1153981220}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1309176896}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
