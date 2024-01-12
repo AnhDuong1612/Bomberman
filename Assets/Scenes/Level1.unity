@@ -1528,14 +1528,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombPrefabs: {fileID: 5594577675246527591, guid: dfa93d472de68f844958dcbbe2972013, type: 3}
   inputKey: 32
-  bombFuseTime: 2.5
+  bombFuseTime: 2
   bombAmount: 3
   explosionPrefab: {fileID: 2425462979835493922, guid: 60d9a489a4c8707498ec74981eb523bc, type: 3}
   explosionLayerMask:
     serializedVersion: 2
     m_Bits: 64
   explosionDuration: 1
-  explosionRadius: 2
+  explosionRadius: 1
   destructibleTilemaps: {fileID: 1640252392}
   DestructiblePrefab: {fileID: 4137699666959236714, guid: f23556e6ffcf78b4fb2c3066d23cdaaa, type: 3}
 --- !u!1 &466305566
@@ -3601,7 +3601,6 @@ GameObject:
   - component: {fileID: 933079026}
   - component: {fileID: 933079025}
   - component: {fileID: 933079030}
-  - component: {fileID: 933079031}
   m_Layer: 3
   m_Name: Player2
   m_TagString: Player
@@ -3772,30 +3771,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombPrefabs: {fileID: 5594577675246527591, guid: dfa93d472de68f844958dcbbe2972013, type: 3}
   inputKey: 281
-  bombFuseTime: 2.5
+  bombFuseTime: 2
   bombAmount: 3
   explosionPrefab: {fileID: 2425462979835493922, guid: 60d9a489a4c8707498ec74981eb523bc, type: 3}
   explosionLayerMask:
     serializedVersion: 2
     m_Bits: 64
   explosionDuration: 1
-  explosionRadius: 2
+  explosionRadius: 1
   destructibleTilemaps: {fileID: 1640252392}
   DestructiblePrefab: {fileID: 4137699666959236714, guid: f23556e6ffcf78b4fb2c3066d23cdaaa, type: 3}
---- !u!114 &933079031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 933079024}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c56eb8ea3baf594685af3490e9f90da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  changeDirectionInterval: 2
 --- !u!1 &934201107
 GameObject:
   m_ObjectHideFlags: 0
