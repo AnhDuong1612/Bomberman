@@ -21,6 +21,7 @@ public class Bomb_Controller : MonoBehaviour
     [Header("Destructible")]
     public Tilemap destructibleTilemaps;
     public Destructible DestructiblePrefab;
+
     private void OnEnable()
     {
         bombRemain = bombAmount;
