@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -71,7 +72,7 @@ public class Movement_Controller : MonoBehaviour
         rigidbody.MovePosition(position + translation); // Di chuyển nhân vật đến vị trí mới
     }
 
-    private void SetDirection(Vector2 newDirection, Render_Sprites spriteRenderer) // Xác định hướng di chuyển của nhân vật
+    public void SetDirection(Vector2 newDirection, Render_Sprites spriteRenderer) // Xác định hướng di chuyển của nhân vật
     {
         direction = newDirection;
 
@@ -116,4 +117,8 @@ public class Movement_Controller : MonoBehaviour
         FindAnyObjectByType<Game_Manager>().CheckWin();
     }
 
+    internal void SetDirection(Vector2 newDirection)
+    {
+        throw new NotImplementedException();
+    }
 }

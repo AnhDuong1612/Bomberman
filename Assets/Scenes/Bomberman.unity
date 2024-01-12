@@ -1374,7 +1374,7 @@ Transform:
   m_GameObject: {fileID: 344070823}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.94, y: 5.22, z: 0.029904928}
+  m_LocalPosition: {x: -5.9, y: 5.1, z: 0.029904928}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1528,14 +1528,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombPrefabs: {fileID: 5594577675246527591, guid: dfa93d472de68f844958dcbbe2972013, type: 3}
   inputKey: 32
-  bombFuseTime: 3
-  bombAmount: 1
+  bombFuseTime: 2.5
+  bombAmount: 3
   explosionPrefab: {fileID: 2425462979835493922, guid: 60d9a489a4c8707498ec74981eb523bc, type: 3}
   explosionLayerMask:
     serializedVersion: 2
     m_Bits: 64
   explosionDuration: 1
-  explosionRadius: 1
+  explosionRadius: 2
   destructibleTilemaps: {fileID: 1640252392}
   DestructiblePrefab: {fileID: 4137699666959236714, guid: f23556e6ffcf78b4fb2c3066d23cdaaa, type: 3}
 --- !u!1 &466305566
@@ -1848,8 +1848,8 @@ Tilemap:
   - first: {x: 4, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2348,8 +2348,8 @@ Tilemap:
   - first: {x: 2, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2358,8 +2358,8 @@ Tilemap:
   - first: {x: 3, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2368,8 +2368,8 @@ Tilemap:
   - first: {x: 4, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3167,14 +3167,14 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 102
+  - m_RefCount: 100
     m_Data: {fileID: 11400000, guid: c3a06d47d77314c44aeae2621db308e5, type: 2}
-  - m_RefCount: 41
+  - m_RefCount: 43
     m_Data: {fileID: 11400000, guid: f8859cda7508d4179ab16ef77c8804c6, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 102
+  - m_RefCount: 100
     m_Data: {fileID: 21300000, guid: 87c994d2848674511b046d5c5f8124ba, type: 3}
-  - m_RefCount: 41
+  - m_RefCount: 43
     m_Data: {fileID: 21300000, guid: fa0976806d260464e9576d251b4eb1ef, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 143
@@ -3601,6 +3601,7 @@ GameObject:
   - component: {fileID: 933079026}
   - component: {fileID: 933079025}
   - component: {fileID: 933079030}
+  - component: {fileID: 933079031}
   m_Layer: 3
   m_Name: Player2
   m_TagString: Player
@@ -3746,7 +3747,7 @@ Transform:
   m_GameObject: {fileID: 933079024}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.07, y: -4.9, z: 0.029904928}
+  m_LocalPosition: {x: 6.1, y: -4.9, z: 0.029904928}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3771,16 +3772,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombPrefabs: {fileID: 5594577675246527591, guid: dfa93d472de68f844958dcbbe2972013, type: 3}
   inputKey: 281
-  bombFuseTime: 3
-  bombAmount: 1
+  bombFuseTime: 2.5
+  bombAmount: 3
   explosionPrefab: {fileID: 2425462979835493922, guid: 60d9a489a4c8707498ec74981eb523bc, type: 3}
   explosionLayerMask:
     serializedVersion: 2
     m_Bits: 64
   explosionDuration: 1
-  explosionRadius: 1
+  explosionRadius: 2
   destructibleTilemaps: {fileID: 1640252392}
   DestructiblePrefab: {fileID: 4137699666959236714, guid: f23556e6ffcf78b4fb2c3066d23cdaaa, type: 3}
+--- !u!114 &933079031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933079024}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c56eb8ea3baf594685af3490e9f90da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  changeDirectionInterval: 2
 --- !u!1 &934201107
 GameObject:
   m_ObjectHideFlags: 0
