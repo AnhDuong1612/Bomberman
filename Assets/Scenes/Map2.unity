@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 124142947}
   - component: {fileID: 124142946}
   - component: {fileID: 124142945}
+  - component: {fileID: 124142951}
   m_Layer: 3
   m_Name: Player1
   m_TagString: Player
@@ -423,6 +424,19 @@ Transform:
   - {fileID: 158701111}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &124142951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124142944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9d4da4477454e30b1befb3dc545df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
 --- !u!1 &158701108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,6 +1493,7 @@ GameObject:
   - component: {fileID: 406210452}
   - component: {fileID: 406210451}
   - component: {fileID: 406210450}
+  - component: {fileID: 406210456}
   m_Layer: 3
   m_Name: Player2
   m_TagString: Player
@@ -1499,7 +1514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombPrefabs: {fileID: 5594577675246527591, guid: dfa93d472de68f844958dcbbe2972013, type: 3}
-  inputKey: 281
+  inputKey: 13
   bombFuseTime: 3
   bombAmount: 1
   explosionPrefab: {fileID: 2425462979835493922, guid: 60d9a489a4c8707498ec74981eb523bc, type: 3}
@@ -1659,6 +1674,19 @@ Transform:
   - {fileID: 687573301}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &406210456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406210449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9d4da4477454e30b1befb3dc545df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
 --- !u!1 &567128702
 GameObject:
   m_ObjectHideFlags: 0
