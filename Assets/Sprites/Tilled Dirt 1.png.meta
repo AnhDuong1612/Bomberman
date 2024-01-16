@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 341d8013494628c4dbff089cbffc58c6
+guid: ba03a68c4b724b340bf75be6e7ffa591
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 31
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grass_0
+      name: Tilled Dirt_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 482500fca36d1bc41a8fda1732846c5e
-      internalID: 2051593736
+      spriteID: 6ac202390938fe84c80f31f20e35ea55
+      internalID: -1500437374
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Grass_0: 2051593736
+      Tilled Dirt_0: -1500437374
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

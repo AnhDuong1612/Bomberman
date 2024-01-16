@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3d71e68b512b79d48a504d976a2a4ef6
+guid: 6a5e03a12684c3b42bbcad728c412180
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 13
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -176,12 +176,12 @@ TextureImporter:
       name: Basic Grass Biom things 1_3
       rect:
         serializedVersion: 2
-        x: 20
+        x: 19
         y: 49
-        width: 24
+        width: 26
         height: 30
       alignment: 9
-      pivot: {x: 0.5, y: 0.17}
+      pivot: {x: 0.5, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -240,30 +240,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 127
-        y: 1
+        y: 0
         width: 17
-        height: 16
-      alignment: 9
-      pivot: {x: 0.6, y: 0.4}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3be31cc0aedb3874fb525200dc9a82b7
-      internalID: 1237117411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Grass Biom things 1_7
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 2
-        width: 14
-        height: 11
+        height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b870681fc6630be48ab2d2c888e70edc
-      internalID: 1417198827
+      spriteID: 3be31cc0aedb3874fb525200dc9a82b7
+      internalID: 1237117411
       vertices: []
       indices: 
       edges: []
@@ -295,7 +274,6 @@ TextureImporter:
       Basic Grass Biom things 1_4: 162617201
       Basic Grass Biom things 1_5: 1875891509
       Basic Grass Biom things 1_6: 1237117411
-      Basic Grass Biom things 1_7: 1417198827
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
