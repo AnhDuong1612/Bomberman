@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a418eb33a47f2cb40a1c687c6a8da0f1
+guid: 7983f01a131cbfd41b02a1c5d7427f78
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 34
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,12 +110,33 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TX Village Prop (32px)_0
+      name: TX Village Props (45px)_0
       rect:
         serializedVersion: 2
-        x: 127
+        x: 42
         y: 960
-        width: 35
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3323f8d61e0a28540b5b4c694be71078
+      internalID: 1760761026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Village Props (45px)_1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 960
+        width: 27
         height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -124,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aac557e2dcfb0c94f8ac5b69b7be3f35
-      internalID: 2030784455
+      spriteID: 07c2ffcc529caf04c9b03b70f202f409
+      internalID: 1068422790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Village Prop (32px)_1
+      name: TX Village Props (45px)_2
       rect:
         serializedVersion: 2
-        x: 194
-        y: 959
-        width: 29
-        height: 37
+        x: 873
+        y: 639
+        width: 50
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +166,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fd20b39929919b4089e94a3265d1052
-      internalID: 1413789539
+      spriteID: d99e49a1b9dca164e85041c07cae3c3f
+      internalID: 900245155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Village Prop (32px)_2
+      name: TX Village Props (45px)_3
       rect:
         serializedVersion: 2
         x: 447
         y: 832
         width: 34
-        height: 25
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea503c09365297418133f7e0ea182de
+      internalID: 1565565631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Village Props (45px) 1_0
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 832
+        width: 37
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54eca1bf0da191d40abdd5e21f43389b
-      internalID: -1759270424
+      spriteID: 4b75c88d49cef324ba7a6d4e77154042
+      internalID: -2086155416
       vertices: []
       indices: 
       edges: []
@@ -183,9 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TX Village Prop (32px)_0: 2030784455
-      TX Village Prop (32px)_1: 1413789539
-      TX Village Prop (32px)_2: -1759270424
+      TX Village Props (45px) 1_0: -2086155416
+      TX Village Props (45px)_0: 1760761026
+      TX Village Props (45px)_1: 1068422790
+      TX Village Props (45px)_2: 900245155
+      TX Village Props (45px)_3: 1565565631
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

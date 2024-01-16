@@ -193,6 +193,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: TX Props_4
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 356
+        width: 24
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5e938ef62376d4eb59d2ab1602126d
+      internalID: 792431131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -208,6 +229,7 @@ TextureImporter:
       TX Props_1: 933663846
       TX Props_2: -1538398569
       TX Props_3: 224085187
+      TX Props_4: 792431131
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
