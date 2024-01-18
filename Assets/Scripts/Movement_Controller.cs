@@ -73,24 +73,26 @@ public class Movement_Controller : MonoBehaviour
 
     private void SetDirection(Vector2 newDirection, Render_Sprites spriteRenderer) // Xác định hướng di chuyển của nhân vật
     {
-        direction = newDirection;
-
+        direction = newDirection; //lưu trữ hướng di chuyển hiện tại
+        // kiểm traxem sprite renderer nào nên được kích hoạt dựa trên sprite renderer được truyền vào.
         if (spriteRenderUp != null) spriteRenderUp.enabled = spriteRenderer == spriteRenderUp;
         if (spriteRenderDown != null) spriteRenderDown.enabled = spriteRenderer == spriteRenderDown;
         if (spriteRenderLeft != null) spriteRenderLeft.enabled = spriteRenderer == spriteRenderLeft;
         if (spriteRenderRight != null) spriteRenderRight.enabled = spriteRenderer == spriteRenderRight;
-
+        // Nếu activeSpriteRender khác null, kiểm tra xem nhân vật có đang đứng yên ko. Nếu đúng kích hoạt trạng thái freeze
         if (activeSpriteRender != null)
         {
             activeSpriteRender.freeze = direction == Vector2.zero;
         }
-
+        // cập nhật activeSpriteRender thành sprite renderer mới
         activeSpriteRender = spriteRenderer;
     }
 
+    //Phương thức này được gọi tự động khi đối tượng này va chạm với một Collider2D khác.
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
+        //Kiểm tra xem đối tượng va chạm có layer là "Explosion" không. Nếu có, gọi phương thức Death().
+        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion"))
         {
             Death();
         }
@@ -98,22 +100,24 @@ public class Movement_Controller : MonoBehaviour
 
     private void Death()
     {
+        //Vô hiệu hóa script của đối tượng hiện tại (enabled = false).
         enabled = false;
+        //Tắt script Bomb_Controller
         GetComponent<Bomb_Controller>().enabled = false;
-
+        // Vô hiệu hóa tất cả các sprite renderer của nhân vật và kích hoạt sprite renderer cho hiệu ứng chết 
         spriteRenderDown.enabled = false;
         spriteRenderLeft.enabled = false;
         spriteRenderRight.enabled = false;
         spriteRenderUp.enabled = false;
         spriteRenderDeath.enabled = true;
-
-        Invoke(nameof(EndGame), 1.25f);
+        // Sử dụng Invoke để gọi phương thức EndGame sau một khoảng thời gian (1.25 giây).
+        //Invoke(nameof(EndGame), 1.25f);
     }
 
-    private void EndGame()
+    /*private void EndGame()
     {
         gameObject.SetActive(false);
         FindAnyObjectByType<Game_Manager>().CheckWin();
-    }
+    }*/
 
 }
