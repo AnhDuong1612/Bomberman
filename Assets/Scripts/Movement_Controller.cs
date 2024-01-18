@@ -111,13 +111,15 @@ public class Movement_Controller : MonoBehaviour
         spriteRenderUp.enabled = false;
         spriteRenderDeath.enabled = true;
         // Sử dụng Invoke để gọi phương thức EndGame sau một khoảng thời gian (1.25 giây).
-        //Invoke(nameof(EndGame), 1.25f);
+        Invoke(nameof(EndGame), 1.25f);
     }
 
-    /*private void EndGame()
+    private void EndGame()
     {
+        // vô hiệu hóa nv
         gameObject.SetActive(false);
+        //Sử dụng FindAnyObjectByType để tìm đối tượng có kiểu là Game_Manager và gọi phương thức CheckWin của nó.
         FindAnyObjectByType<Game_Manager>().CheckWin();
-    }*/
+    }
 
 }
