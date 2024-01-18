@@ -11,7 +11,14 @@ public class Movement_Controller : MonoBehaviour
     public KeyCode inputDown = KeyCode.S;
     public KeyCode inputLeft = KeyCode.A;
     public KeyCode inputRight = KeyCode.D;
-    public float speed { get; private set; } = 5f; // Tốc độ di chuyển của nhân vật
+    private float _speed = 5f;
+
+    //public float speed { get; private set; } = 5f;
+    public float speed // Tốc độ di chuyển của nhân vật
+    {
+        get { return _speed; }
+        set { _speed = value; }
+    } 
 
     public Render_Sprites spriteRenderUp;
     public Render_Sprites spriteRenderDown;
@@ -19,10 +26,12 @@ public class Movement_Controller : MonoBehaviour
     public Render_Sprites spriteRenderRight;
     public Render_Sprites spriteRenderDeath;
     public Render_Sprites activeSpriteRender;
-
+    //thiết lập các trạng thái khởi đầu và cấu hình đối tượng trước khi trò chơi bắt đầu
     private void Awake()
     {
+        //tham chiếu đến thành phần Rigidbody2D và gán vào biến rigidbody
         rigidbody = GetComponent<Rigidbody2D>();
+        //hiển thị hình ảnh của đối tượng trong trạng thái khởi đầu là down
         activeSpriteRender = spriteRenderDown;
         InitializeSpriteRenderers();
     }
