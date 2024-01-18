@@ -129,6 +129,9 @@ public class Movement_Controller : MonoBehaviour
         gameObject.SetActive(false);
         //Sử dụng FindAnyObjectByType để tìm đối tượng có kiểu là Game_Manager và gọi phương thức CheckWin của nó.
         FindAnyObjectByType<Game_Manager>().CheckWin();
-    }
 
+
+        // pls đừng xoá 
+        FindAnyObjectByType<ScoreManager>().AddScore();
+    }
 }
