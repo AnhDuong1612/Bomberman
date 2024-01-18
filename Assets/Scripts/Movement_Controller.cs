@@ -113,7 +113,8 @@ public class Movement_Controller : MonoBehaviour
     private void EndGame()
     {
         gameObject.SetActive(false);
-        FindAnyObjectByType<Game_Manager>().CheckWin();
+        FindAnyObjectByType<Game_Manager>().CheckWin(); // chuyen man
+        FindAnyObjectByType<ScoreManager>().AddScore(); // + diem
     }
 
 }

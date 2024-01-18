@@ -5,7 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] GameObject pausePanel;
+    public GameObject pausePanel;
+    public void Awake()
+    {
+        pausePanel = GameObject.FindGameObjectWithTag("PausePanel");
+        if (pausePanel == null) Debug.Log("Pause panel null");
+        else Debug.Log("Pause panel != null");
+    }
     public void Pause()
     {
         pausePanel.SetActive(true);
