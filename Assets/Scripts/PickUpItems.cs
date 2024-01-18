@@ -9,7 +9,13 @@ public class PickUpItems : MonoBehaviour
         SpeedIncrease,
     }
 
+
     public ItemType type;
+    AudioManager audioManager;
+    private void Awake()
+    {
+         audioManager = GameObject.FindGameObjectWithTag("audio").GetComponent<AudioManager>();
+    }
 
     private void OnItemPickup(GameObject player)
     {
@@ -35,6 +41,7 @@ public class PickUpItems : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            audioManager.PlaySFX(audioManager.collect);
             OnItemPickup(other.gameObject);
         }
     }

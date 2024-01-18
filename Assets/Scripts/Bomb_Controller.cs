@@ -22,6 +22,17 @@ public class Bomb_Controller : MonoBehaviour
     public Tilemap destructibleTilemaps; //Tilemap chứa các ô gạch có thể phá hủy.
     public Destructible DestructiblePrefab; //Prefab của đối tượng có thể phá hủy.
 
+
+    // sfx
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("audio").GetComponent<AudioManager>();
+    }
+
+
+
     private void OnEnable()
     {
         bombRemain = bombAmount;
@@ -84,7 +95,8 @@ public class Bomb_Controller : MonoBehaviour
         explosion.DestroyAfter(explosionDuration);
         //gọi đệ quy để tạo hiệu ứng nổ tiếp theo với length giảm đi 1 và vị trí tiếp theo theo hướng nổ.
         Explode(position, direction, length - 1);
-
+        // hieu ung am thanh
+        audioManager.PlaySFX(audioManager.explosion);
     }
 
     // phá hủy các đối tượng có thể phá hủy
